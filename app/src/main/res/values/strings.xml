@@ -3,4 +3,22 @@
     <string name="app_chineseName">智慧型經紀人</string>
 
     <string name="action_settings">Settings</string>
+
+    <!-- User Account System -->
+    <string name="TextView_auto_login">自動登入</string>
+    <string name="TextView_forget_account_or_password">忘記帳號或密碼?</string>
+    <string name="Button_Login">登入</string>
+    <string name="Button_Register">註冊</string>
+    <string name="Button_Modify">修改帳號或密碼</string>
+    <string name="Hint_Account">帳號</string>
+    <string name="Hint_Password">密碼</string>
+    <string name="Hint_Email">電子信箱</string>
+    <string name="FloatingLabel_Account">帳號欄位請輸入5~10個英文或數字</string>
+    <string name="FloatingLabel_Password">密碼欄位請輸入5~10個英文或數字</string>
+    <string name="FloatingLabel_Email">請輸入常用的電子信箱</string>
+    <string name="Query_Title">請選擇要查詢的項目</string>
+    <string name="Hint_InputRegisterEMail">請輸入註冊時使用的電子信箱</string>
+    <string name="Hint_Result">查詢結果</string>
+    <string name="Spinner_Information">電子信箱</string>
+
 </resources>
