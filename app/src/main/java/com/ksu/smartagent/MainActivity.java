@@ -24,6 +24,6 @@ public class MainActivity extends AppCompatActivity {
 
         statusBarColorChange = new StatusBarColorChange(this); //建立更改狀態列顏色的物件
 
-        toolbar.setTitle(""); //為了在Toolbar上顯示置中的中文app name，這邊把原本的Toolbar Title設為空值
+        toolbar.setTitle(""); //為了在Toolbar上顯示置中的中文app name，這邊將原本的Toolbar Title設為空值
     }
 }
