@@ -16,6 +16,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.ksu.calendar.CalendarActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     //宣告Layout上的View
@@ -42,6 +44,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+
+        /*
+        //如果已註冊帳號密碼 , 則將註冊的按鈕設為隱藏
+        if(prefs_UserAccount.getString("REGISTERED" , "").equals("Y")){
+            btnRegister.setVisibility(View.GONE);
+        }
+        */
     }
 
     //初始化Function
@@ -172,9 +181,9 @@ public class MainActivity extends AppCompatActivity {
                         //提示登入成功訊息
                         Toast.makeText(getApplication() , "登入成功 !" ,Toast.LENGTH_SHORT).show();
 
-                        //Intent intent = new Intent(getApplicationContext() , CalendarActivity.class);
-                        //startActivity(intent);
-                        //finish();
+                        Intent intent = new Intent(getApplicationContext() , CalendarActivity.class);
+                        startActivity(intent);
+                        finish();
                     }
 
                     break;
