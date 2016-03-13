@@ -245,6 +245,14 @@ public class CompactCalendarView extends View {
         }
     }
 
+    public void showSpecificMonth(int Month){
+        compactCalendarController.showSpecificMonth(Month);
+        invalidate();
+        if(listener != null){
+            listener.onMonthScroll(compactCalendarController.getFirstDayOfCurrentMonth());
+        }
+    }
+
     @Override
     protected void onMeasure(int parentWidth, int parentHeight) {
         super.onMeasure(parentWidth, parentHeight);

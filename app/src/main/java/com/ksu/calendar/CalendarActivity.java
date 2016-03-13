@@ -64,7 +64,7 @@ public class CalendarActivity extends AppCompatActivity {
         @Override
         public void onDayClick(Date dateClicked) {
             Log.d("MainActivity", "點擊的日期為 : " + dateClicked.getDate());
-            addEvents(calendarView,  dateClicked);
+            addEvents(dateClicked);
         }
 
         @Override
@@ -74,16 +74,11 @@ public class CalendarActivity extends AppCompatActivity {
         }
     };
 
-    private void addEvents(CompactCalendarView CalendarView, Date Date) {
-        //currentCalender.setTime(new Date());
-        //currentCalender.set(Calendar.DAY_OF_MONTH, 1);
-        //Date firstDayOfMonth = currentCalender.getTime();
-
+    //新增標記
+    private void addEvents(Date Date) {
         currentCalender.set(Calendar.MONTH , Date.getMonth());
         currentCalender.set(Calendar.DATE , Date.getDate());
         calendarView.addEvent(new CalendarDayEvent(currentCalender.getTimeInMillis(), Color.argb(255, 169, 68, 65)), false);
-
-        String str = String.format("%tF %<tT", currentCalender.getTimeInMillis());
     }
 
     //設定Toolbar Title的method
