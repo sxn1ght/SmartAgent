@@ -85,9 +85,9 @@ public class MainActivity extends AppCompatActivity {
                 + "是否勾選自動登入:" + prefs_UserAccount.getString("AutoLoginIsChecked", ""));
 
         //如果已註冊帳號密碼 , 則將註冊的按鈕設為隱藏
-        if(prefs_UserAccount.getString("REGISTERED" , "").equals("Y")){
+        /*if(prefs_UserAccount.getString("REGISTERED" , "").equals("Y")){
             btnRegister.setVisibility(View.GONE);
-        }
+        }*/
 
         //若AutoLoginIsChecked欄位為"Y" , 則表示使用者上次登入帳號時有勾選CheckBox
         //因此自動填入各個EditText , 且設定Checkbox為勾選狀態
@@ -120,8 +120,8 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), "您還未進行帳號註冊 ! ", Toast.LENGTH_SHORT).show();
                         return;
                     }else{
-                        //Intent intent = new Intent(getApplicationContext() , ForgetPasswordActivity.class);
-                        //startActivity(intent);
+                        Intent intent = new Intent(getApplicationContext() , ForgotUserInfoActivity.class);
+                        startActivity(intent);
                     }
                     break;
             }

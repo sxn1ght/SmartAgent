@@ -3,7 +3,7 @@
     <!-- 主要顏色 -->
     <color name="colorPrimary">#009688</color>
     <color name="colorPrimaryDark">#00796B</color>
-    <color name="colorAccent">#FF5722</color>
+    <color name="colorAccent">#FF9800</color>
     <color name="TextColor" type="color">#222222</color>
     <color name="SecondaryTextColor" type="color">#767676</color>
 
@@ -24,6 +24,6 @@
     <color name="divider_dark">#666666</color>
 
     <!-- Selector -->
-    <color name="button_selector">#dddddd</color>
+    <color name="button_selector">#ff33b5e5</color>
 
 </resources>
