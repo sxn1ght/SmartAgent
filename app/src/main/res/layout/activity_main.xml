@@ -74,6 +74,38 @@
                 android:hint="@string/Hint_Password"
                 android:background="@color/white"/>
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right">
+
+                <CheckBox
+                    android:id="@+id/chkAutoLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/TextView_auto_login"
+                    android:layout_toEndOf="@id/chkAutoLogin"
+                    android:gravity="center_vertical"/>
+
+            </RelativeLayout>
+
+
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:text="@string/Button_Login"
+                android:textSize="16sp"
+                android:textColor="@color/colorPrimary"
+                android:background="@color/white"/>
+
         </LinearLayout>
 
     </RelativeLayout>

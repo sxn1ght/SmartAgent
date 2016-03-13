@@ -6,7 +6,6 @@ import android.support.v7.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
 
-    private StatusBarColorChange statusBarColorChange; //宣告更改狀態列顏色的物件
     private Toolbar toolbar; //宣告Toolbar
 
     @Override
@@ -22,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        statusBarColorChange = new StatusBarColorChange(this); //建立更改狀態列顏色的物件
+        StatusBarColorChange statusBarColorChange = new StatusBarColorChange(this); //建立更改狀態列顏色的物件
 
         toolbar.setTitle(""); //為了在Toolbar上顯示置中的中文app name，這邊將原本的Toolbar Title設為空值
     }
