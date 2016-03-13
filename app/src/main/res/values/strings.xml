@@ -5,8 +5,9 @@
     <string name="action_settings">Settings</string>
 
     <!-- User Account System -->
+    <string name="title_register_activity">帳號註冊</string>
     <string name="TextView_auto_login">自動登入</string>
-    <string name="TextView_forget_account_or_password">忘記帳號或密碼?</string>
+    <string name="TextView_forget_account_or_password">忘記帳號或密碼 ?</string>
     <string name="Button_Login">登入</string>
     <string name="Button_Register">註冊</string>
     <string name="Button_Modify">修改帳號或密碼</string>
@@ -20,5 +21,11 @@
     <string name="Hint_InputRegisterEMail">請輸入註冊時使用的電子信箱</string>
     <string name="Hint_Result">查詢結果</string>
     <string name="Spinner_Information">電子信箱</string>
+    <string name="title_activity_register">RegisterActivity</string>
+
+    <string name="Button_Confirm">確定</string>
+    <string name="Button_Query">查詢</string>
+    <string name="Button_Cancel">取消</string>
+    <string name="Button_Back">返回</string>
 
 </resources>

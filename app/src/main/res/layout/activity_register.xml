@@ -7,8 +7,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:background="@color/colorPrimary"
-    android:focusableInTouchMode="true"
-    tools:context="com.ksu.smartagent.MainActivity">
+    tools:context="com.ksu.smartagent.RegisterActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -23,11 +22,18 @@
             app:titleTextAppearance="@style/ToolbarTitle"
             app:popupTheme="@style/AppTheme.PopupOverlay">
 
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/ToolbarTitle"
-                android:text="@string/app_chineseName" />
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/ToolbarTitle"
+                    android:text="@string/title_register_activity" />
+
+            </LinearLayout>
 
         </android.support.v7.widget.Toolbar>
 
@@ -35,20 +41,25 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:paddingTop="16dp"
         android:paddingBottom="16dp"
         android:paddingRight="16dp"
         android:paddingLeft="16dp"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_gravity="center"
             android:paddingRight="16dp"
             android:paddingLeft="16dp"
             android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/spnEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"/>
 
             <EditText
                 android:id="@+id/etEmail"
@@ -59,7 +70,8 @@
                 android:singleLine="true"
                 android:inputType="textEmailAddress"
                 android:hint="@string/Hint_Email"
-                android:background="@color/white"/>
+                android:background="@color/white"
+                android:visibility="gone"/>
 
             <EditText
                 android:id="@+id/etPassword"
@@ -74,63 +86,39 @@
                 android:hint="@string/Hint_Password"
                 android:background="@color/white"/>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="right"
-                android:layout_marginTop="16dp">
+        </LinearLayout>
 
-                <CheckBox
-                    android:id="@+id/chkAutoLogin"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentTop="true"
-                    android:checked="false"/>
-
-                <TextView
-                    android:id="@+id/tvchkAutoLogin"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_toStartOf="@id/chkAutoLogin"
-                    android:textSize="16sp"
-                    android:text="@string/TextView_auto_login"/>
-
-            </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp"
+            android:paddingBottom="32dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
 
             <Button
-                android:id="@+id/btnLogin"
+                android:id="@+id/btnConfirm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="64dp"
-                android:text="@string/Button_Login"
+                android:text="@string/Button_Confirm"
                 android:textSize="16sp"
                 android:textColor="@color/colorPrimaryDark"
                 android:background="@drawable/login_button_selector"/>
 
             <Button
-                android:id="@+id/btnRegister"
+                android:id="@+id/btnCancel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:text="@string/Button_Register"
+                android:text="@string/Button_Cancel"
                 android:textSize="16sp"
                 android:textColor="@color/colorPrimaryDark"
                 android:background="@drawable/login_button_selector" />
 
-            <TextView
-                android:id="@+id/tvForget"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="24dp"
-                android:text="@string/TextView_forget_account_or_password"
-                android:textSize="16sp" />
-
         </LinearLayout>
 
     </RelativeLayout>
-
 
 </android.support.design.widget.CoordinatorLayout>
